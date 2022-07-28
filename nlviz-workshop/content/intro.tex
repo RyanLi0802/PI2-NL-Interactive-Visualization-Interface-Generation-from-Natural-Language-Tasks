@@ -1,0 +1,42 @@
+Interactive visualization interfaces (or simply {\it interfaces}) play a critical role in nearly every stage of data management---including data cleaning~\cite{wu2013scorpion}, wrangling~\cite{Kandel2011WranglerIV}, modeling~\cite{facets}, exploration~\cite{Murray2013TableauYD, Chen2021TSExplainSE}, and communication~\cite{icheck,fivethirtyeight}. 
+
+Such interfaces require considerable expertise and trial-and-error to design and implement because the charts, interactions, and layout should be chosen to support the underlying analysis task~\cite{munzner2014visualization}.
+Our recent work \sysold~\cite{chen2022pi2,pi2demo} uses SQL as proxy for analysis task, and is the first system to automatically generate  a fully interactive multi-visualization interface from SQL analysis. Under the hood, \sysold proposes \difftrees as a compact representation of an anlysis task, models interface generation as a schema mapping problem, and search for an optimal interface mapping given a cost model. \sysold helps designer automatically and effectively translate analysis, i.e. SQL queries into interfaces so that user can focus on the analysis without worrying about complicated interface design and implementation. 
+
+Although SQL is ubiquitous in data analysis, it is still hard for normal people, especially non-programmers to write.
+Specifying the analysis task in natural language would be a much more accessible and promising way for everyone. Recently, advancements in translation based NLP technologies~\cite{scholak2021picard, https://doi.org/10.48550/arxiv.2109.05153} have vastly improved accuracy of producing schema-aware SQL queries from natural language question. And large task-agnostic language models such as GPT-3\cite{brown2020language} and Codex\cite{chen2021evaluating} can perform well on custom tasks with few-shot examples provided as context. Combined with \sysold, we propose \textbf{ \sys, the first system to automatically generate interactive multi-visualization interface from natural language tasks.} \sys provides Codex with few-shot examples to output \difftree representation from input natural language task and use \sys to generate interactive interface for the input analysis. \yiru{doubel check NLP model description}
+
+Below are two end-to-end examples: 
+\begin{example}[Covid Analysis]
+Given the COVID-19 dataset, a user is interested in two tasks - ``How is covid total cases or deaths across all the states in US?", and ``How is US‘s covid case trends and different states’ covid cases trend all the time?  And how about the recent trends in 7 or 30 days ? " as shown in \Cref{example}(a). \sys will generate an interactive visualization interface in \Cref{example}(b). The map visualization corresonding to the first task. Users can interact with the middle button widget to choose to show the death distribution in \Cref{example}(c). The line chart in \Cref{example}(b) shows the US overall trend. Users can toggle on to specify the date range e.g. recent 30 days and click on the map visualization to filter specific state, e.g. ``Texas''. After these interactions, \Cref{example}(c)'s bottom line chart shows the Texas' recent 30 days covid cases trend. 
+        
+\end{example}
+
+\begin{example}[Sales Analysis]
+For the supermarket sales dataset~\cite{kagglesales}, in \Cref{example}(d), a user writes two analysis tasks - ``How is total sales of different product lines and branches along the time?'', and ``How is the total sales for different cities‘  highest product line in different time periods?'' \Cref{example}(e) shows the interface where the above visualization shows the total sales of task 1 and the bottom visualization shows each city's highest product line's sale. Notice that the task 2' analysis is a complilcated query analysis which has to first find each city's highest product line in different period and then calculte the total sales. This results in complicated subqueris rather simple SPJA queries. For the interface, users can interact the button widget and the dropdown widget to specify the branch and product line. Brushing over the first visualizaiton will specify the time period for the second analysis task. 
+ With such an interactive interface, users can easily explore different branches, product lines and periods. 
+        
+\end{example}
+
+As we can see,  with \sys, users can purely focus on write analysis task in natural language, and \sys will automatically return a fully interactive multi-visualization interfaces that can perform the data analysis task. 
+
+There is also a line of work which answer natural language task or dialogue  with visualization 
+
+they focus on visualization specification around one certain question, 
+
+\sys is beyond this in that it takes consideration of multi view, it considers interface characteristic 
+
+yet, \sys clearly differ them they mainly focus on single visualization specify /  what's more, since \sys use sql \difftree as intermediate representation, it can express complicated query where these work can not. 
+
+
+
+Above all, this paper contribute \sys 
+
+which is able to  
+we organize paper in the following 
+related work 
+system overview 
+
+
+
+

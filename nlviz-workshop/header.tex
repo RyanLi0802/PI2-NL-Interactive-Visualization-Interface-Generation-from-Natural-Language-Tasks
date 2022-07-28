@@ -1,0 +1,128 @@
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{balance}  % for  \balance command ON LAST PAGE  (only there!)
+\usepackage{adjustbox}
+\usepackage{footmisc}
+\usepackage{soul}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{listings}
+\usepackage{cleveref}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{booktabs} % For formal tables
+\usepackage{xspace}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{subcaption}
+\usepackage{balance}
+\usepackage{mathtools}
+\usepackage{scalerel}
+%\usepackage{amssymb}
+%\usepackage{tcolorbox}% http://ctan.org/pkg/tcolorbox
+\usepackage{adjustbox}
+%\usepackage{nopageno}
+\usepackage{float}
+
+\usepackage[noend]{algpseudocode}
+\usepackage{algorithmicx,algorithm}
+
+
+\pagenumbering{arabic}
+
+
+\definecolor{darkgreen}{rgb}{0.15,0.55,0.15}
+\definecolor{darkblue}{rgb}{0.1,0.1,0.5}
+\definecolor{orange}{rgb}{1, 0.64, 0}
+%\definecolor{blue}{rgb}{0.19,0.58,1}
+\definecolor{blue}{rgb}{0.01,0.40,.8}
+\definecolor{darkgreen}{rgb}{0.15,0.55,0.15}
+\definecolor{mred}{rgb}{.80,.12,.30}
+\definecolor{grey}{rgb}{0.5,0.5,0.5}
+\definecolor{Purple}{rgb}{.75,0,.85}
+\definecolor{light-gray}{gray}{0.95}
+\definecolor{mid-gray}{gray}{0.85}
+\definecolor{darkred}{rgb}{0.7,0.25,0.25}
+\definecolor{rose}{rgb}{1.0, 0.01, 0.24}
+\definecolor{lightyellow}{HTML}{FFD700}
+\definecolor{lgreen}{HTML}{C2E9D7}
+%\definecolor{rose}{rgb}{0.9, 0.13, 0.13}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\darkgreen}[1]{\textcolor{darkgreen}{#1}}
+\newcommand{\lightyellow}[1]{\textcolor{lightyellow}{#1}}
+\newcommand{\grey}[1]{\textcolor{grey}{#1}}
+\newcommand{\gray}[1]{\textcolor{grey}{#1}}
+\newcommand{\rose}[1]{\textcolor{americanrose}{#1}}
+\newcommand{\redtt}[1]{\textcolor{red}{\texttt{#1}}}
+\newcommand{\green}[1]{\textcolor{green}{#1}}
+\newcommand{\lgreen}[1]{\textcolor{lgreen}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\orange}[1]{\textcolor{orange}{#1}}
+\newcommand{\highlight}[1]{{\setlength{\fboxsep}{1pt}\colorbox{yellow}{\textbf{\texttt{#1}}}}}
+\newcommand{\ghighlight}[1]{{\setlength{\fboxsep}{1pt}\colorbox{lgreen}{\textbf{\texttt{#1}}}}}
+
+
+%\newtcbox{\redbox}{on line,
+%  colframe=white,colback=red!10!white,
+%  height=1em,valign=bottom,
+%  boxrule=0.5pt,arc=2pt,boxsep=0pt,left=2pt,right=2pt,top=1pt,bottom=1pt}
+%\newtcbox{\bluebox}{on line,
+%  colframe=white,colback=blue!10!white,
+%  height=1em,valign=bottom,
+%  boxrule=0.5pt,arc=2pt,boxsep=0pt,left=2pt,right=2pt,top=1pt,bottom=1pt}
+
+
+
+\newcommand{\eat}[1]{}
+
+\newcommand{\ititle}[1]{\vspace{2pt}\noindent\emph{#1}}
+\newcommand{\stitle}[1]{\smallskip\noindent\textbf{#1}}
+\newcommand{\sstitle}[1]{\noindent\textbf{#1}}
+\newtheorem{theorem}{Theorem}
+
+%% listing settings
+\newlength{\listingindent}                %declare a new length
+\setlength{\listingindent}{\parindent}    %make it a fixed version of \parindent
+\lstset{escapeinside={<@}{@>}, language=SQL}
+\lstset{xleftmargin=2em}
+
+\lstset{
+	language = SQL,
+	showspaces=false,
+	basicstyle=\ttfamily\scriptsize,
+	commentstyle=\color{gray},
+	mathescape=true,
+	numbers=none,
+    escapeinside={^}{^},
+	captionpos=b,	
+	float=tp,
+	floatplacement=tbp,
+	belowskip=-0.05em,
+    breaklines=true,
+    frame=tlrb,
+    xleftmargin=0pt,xrightmargin=0pt
+} 
+
+\usepackage{tablefootnote}
+
+\usepackage[LGRgreek]{mathastext}
+\widowpenalty=10000
+\clubpenalty=10000
+
+
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+
+\newcommand{\papertext}[1]{#1}
+\newcommand{\techreport}[1]{#1}
+
+
+\newenvironment{myitemize}{\vspace{-0.1in}\begin{list}{\gray{$\bullet$}}{\renewcommand{\itemsep}{-0.0in}\renewcommand{\leftmargin}{0.15in}}}{\end{list}\vspace{-.1in}}
+
+\newcommand{\spacing}[1]{\renewcommand{\baselinestretch}{#1}}
+
+
+\renewcommand{\arraystretch}{1}
+
